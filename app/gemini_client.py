@@ -1,4 +1,4 @@
-from google import generativeai, genai
+from google import generativeai
 from app.config import GEMINI_API_KEY
 from dotenv import load_dotenv
 import os
@@ -14,7 +14,7 @@ model = generativeai.GenerativeModel(
     }
 )
 
-client = genai.Client(api_key=GEMINI_API_KEY)
+# client = genai.Client(api_key=GEMINI_API_KEY)
 
 def generate_response(prompt: str, history: list = None):
     try:
